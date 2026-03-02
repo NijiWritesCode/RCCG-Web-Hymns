@@ -1,5 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
+import router from "./routers/HymnRouter.js";
+import { connectDb } from "./config/db.js";
 
 dotenv.config();
 
@@ -7,10 +9,11 @@ const PORT = process.env.PORT
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.send("Home");
-})
+app.use(express.json());
 
-app.listen(7900, () => {
+app.use('/api/hymns', router)
+
+connectDb()
+app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 })
