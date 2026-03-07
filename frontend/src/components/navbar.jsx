@@ -23,7 +23,7 @@ const Navbar = () => {
 
 			{sideBar ? (
 				<div className="absolute inset-0 bg-black/50 h-screen" onClick={toggle}>
-					<ul className=" relative bg-gray-900 text-white pt-3 pl-2 pr-6 w-[50%] h-[50%] -right-51 flex flex-col gap-3 text-md">
+					<ul className=" relative bg-gray-900 z-50 text-white pt-3 pl-2 pr-6 w-[50%] h-[50%] -right-51 flex flex-col gap-3 text-md">
                         <X className="text-red-600 absolute right-0 mr-2.5" onClick={toggle}/>
 						<li>Home</li>
 						<li>Explore</li>
