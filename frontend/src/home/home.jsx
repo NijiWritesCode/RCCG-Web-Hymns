@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import hero_image from '../assets/hero-image.png'
 import FeatureCard from "../components/featureCard";
 import { Bolt, Users, Zap } from "lucide-react";
+import HymnCard from "../components/hymnCard";
 
 const Home = () => {
 	return (
@@ -23,7 +24,7 @@ const Home = () => {
 								placeholder="Search hymn..."
 								className=" w-[85%] lg:w-200 border-2 border-gray-300 mt-4 pl-3 rounded-xl h-15 lg:text-xl pr-28"
 							/>
-							<button className="bg-blue-700 -z-20 px-3 py-2 lg:text-xl text-white rounded-lg shadow-md shadow-blue-500 relative -right-25 -top-12.5 lg:-top-0 lg:-left-25 cursor-pointer hover:rounded-full hover:px-4 transition-all ease-in-out duration-100">
+							<button className="bg-blue-700 -z-20 lg:-z-0 px-3 py-2 lg:text-xl text-white rounded-lg shadow-md shadow-blue-500 relative -right-25 -top-12.5 lg:-top-0 lg:-left-25 cursor-pointer hover:rounded-full hover:px-4 transition-all ease-in-out duration-100">
 								Search
 							</button>
 						</div>
@@ -35,11 +36,27 @@ const Home = () => {
 				</section>
 			</header>
 
-			<main className="w-[90%] mx-auto">
+			<main className="w-[90%] mx-auto mt-10">
+
 				<section className=" flex justify-center items-center flex-wrap gap-5 mt-10 mb-10">
 					<FeatureCard icon={Zap} feature={"Fast Search"} featBrief={"Get Your Desired Hymn Quick And Fast As You Type In Your Prompt."}/>
 					<FeatureCard icon={Users} feature={"Community Support"} featBrief={"You Can Always Request For A Hymn To Be Added, Provided The Hymn Isn't Already Available"}/>
 					<FeatureCard icon={Zap} feature={"Fast Search"} featBrief={"Get Your Desired Hymn Quick And Fast As You Type In Your Prompt."}/>
+				</section>
+
+				<section className="my-15">
+					<h1 className="text-blue-800 text-center mb-5">
+						POPULAR HYMNS
+					</h1>
+
+					<div className="flex justify-center items-center gap-5 flex-wrap ">
+						<HymnCard hymnTitle={"Great Is Thy Faithfulness"} hymnLyrics={"Morning By Morning New Mercies I Seek"}/>
+						<HymnCard hymnTitle={"Great Is Thy Faithfulness"} hymnLyrics={"Morning By Morning New Mercies I Seek"}/>
+						<HymnCard hymnTitle={"Great Is Thy Faithfulness"} hymnLyrics={"Morning By Morning New Mercies I Seek"}/>
+						<HymnCard hymnTitle={"Great Is Thy Faithfulness"} hymnLyrics={"Morning By Morning New Mercies I Seek"}/>
+						<HymnCard hymnTitle={"Great Is Thy Faithfulness"} hymnLyrics={"Morning By Morning New Mercies I Seek"}/>
+						<HymnCard hymnTitle={"Great Is Thy Faithfulness"} hymnLyrics={"Morning By Morning New Mercies I Seek"}/>
+					</div>
 				</section>
 			</main>
 		</>
