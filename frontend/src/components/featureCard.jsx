@@ -2,21 +2,21 @@ import React from "react";
 
 const FeatureCard = ({ icon: Icon, feature, featBrief }) => {
 	return (
-		<>
-			<div className="w-90 space-y-3 shadow-xl shadow-gray-400 rounded-md min-h-20 bg-blue-200 px-3 py-2">
-				<div className="bg-blue-300 px-2 py-2 rounded-lg border border-blue-700 w-11 text-blue-700 ">
-					<Icon size={24} fill/>
-				</div>
-
-                <h3 className="text-xl text-blue-700 font-semibold">
-                    {feature}
-                </h3>
-
-                <p className="text-sm mt-3 text-blue-700">
-                    {featBrief}
-                </p>
+		<div className="w-90 bg-blue-100 border border-blue-200 rounded-xl p-5 space-y-4 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+			
+			<div className="w-12 h-12 flex items-center justify-center bg-blue-200 text-blue-700 rounded-lg border border-blue-300">
+				<Icon size={22} />
 			</div>
-		</>
+
+			<h3 className="text-lg font-semibold text-blue-800">
+				{feature}
+			</h3>
+
+			<p className="text-sm text-blue-700 leading-relaxed">
+				{featBrief}
+			</p>
+
+		</div>
 	);
 };
 
